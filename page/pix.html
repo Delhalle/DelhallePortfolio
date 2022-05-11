@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>PortFolio - DELHALLE Mathis</title>
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+            <meta content="PortFolio" name="keywords">
+            <meta content="PortFolio" name="description">
+    
+            <!-- Favicon -->
+            <link href="img/favicon.png rel="icon">
+    
+            <!-- Google Font -->
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+            <!-- CSS Libraries -->
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+            <link href="lib/animate/animate.min.css" rel="stylesheet">
+            <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+            <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    
+            <!-- Template Stylesheet -->
+            <link href="../css/styleProjet.css" rel="stylesheet">
+        </head>
+    
+        <body data-spy="scroll" data-target=".navbar" data-offset="51">
+            <!-- Nav Bar Start -->
+            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                <div class="container-fluid">
+                    <a href="../page/accueil.html" class="navbar-brand">PortFolio</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            <!-- Nav Bar End -->
+    
+             <!-- Team Start -->
+             <div class="PortFolio" id="PORTFOLIO">
+                <div class="container-fluid">
+                    <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                        <p>PortFolio</p>
+                        <h2>Ma certification PIX</h2>
+                    </div>
+    
+                    <section id="portfolio-details" class="portfolio-details">
+                        <div class="container">
+                          <div class="portfolio-details-container">
+                  
+                            <div class="slideshow-container" style="border: 7px inset #c01010; border-radius: 20px 20px 20px 20px;">
+    
+                                <div class="mySlides fade">
+                                    <div class="numbertext">1 / 3</div>
+                                    <img src="../img/pixExemple1.png" style="width:1100px; height:500px">
+                                    <div class="text">Réalisation d'un diagramme</div>
+                                </div>
+                            
+                                <div class="mySlides fade">
+                                    <div class="numbertext">2 / 3</div>
+                                    <img src="../img/pixExemple2.png" style="width:1100px; height:500px">
+                                    <div class="text">Message indésirable dans un mail</div>
+                                </div>
+
+                                <div class="mySlides fade">
+                                    <div class="numbertext">3 / 3</div>
+                                    <img src="../img/pixExemple3.png" style="width:1100px; height:500px">
+                                    <div class="text">Envoi de mail</div>
+                                </div>
+                            
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            
+                            </div>
+                            <br><br>
+                            
+                            <div style="text-align:left">
+                            <span class="dot" onclick="currentSlide(1)"></span> 
+                            <span class="dot" onclick="currentSlide(2)"></span> 
+                            <span class="dot" onclick="currentSlide(3)"></span> 
+                            </div>
+                            
+                            <script>
+                            var slideIndex = 1;
+                            showSlides(slideIndex);
+                            
+                            function plusSlides(n) {
+                            showSlides(slideIndex += n);
+                            }
+                            
+                            function currentSlide(n) {
+                            showSlides(slideIndex = n);
+                            }
+                            
+                            function showSlides(n) {
+                            var i;
+                            var slides = document.getElementsByClassName("mySlides");
+                            var dots = document.getElementsByClassName("dot");
+                            if (n > slides.length) {slideIndex = 1}    
+                            if (n < 1) {slideIndex = slides.length}
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";  
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                            }
+                            slides[slideIndex-1].style.display = "block";  
+                            dots[slideIndex-1].className += " active";
+                            }
+                            </script>
+                    <div class="portfolio-info">
+                        <h3>Information de la certification</h3>
+                        <ul>
+                        <li><strong>Site</strong>: OpenClassroom</li>
+                        <li><strong>Découverte</strong>: Professeur, service-public</li>
+                        <li><strong>Dates de la certification</strong>: mars 2021, février 2022</li>
+                        </ul>
+                    </div>
+                </div>
+                <h2>La certification PIX qu'est-ce que c'est ?</h2>
+                <div class="Certification-pix">
+                    <div class="Certification-img">
+                        <img src="../img/pixCertif.png" alt="Image">
+                    </div>
+                    <div class="Certification-text">
+                        <p>Depuis la rentrée scolaire 2019, le dispositif PIX remplace le brevet informatique et internet (B2i) 
+                        et le niveau 1 de la certification informatique et internet (C2i).
+                        Pix est une plateforme publique qui permet à tout un chacun (collégien, lycéen, actif, chercheur d'emploi, retraité...) d'auto-évaluer ses compétences numériques 
+                        et de certifier officiellement ses compétences numériques dans un établissement scolaire ou dans un centre agréé.
+                        Il est possible de s'entrainer pour passer la certification sur 16 compétences informatiques.
+                        </p>
+                        <h3>Pourquoi avoir passés cette certification ?</h3>
+                        <p>
+                            C'est une certification qui est obligatoire pour l'obtention de mon BTS SIO. Et PIX m'a permis d'évaluer mes compétences informatiques.
+                        </p>
+                        <h3>Mes objectifs</h3>
+                        <p>
+                            -M'auto-évaluer sur mes compétences informatiques.
+                            <br>-Découvrir de nouvelles fonctionnalités informatiques.
+                            <br>-Obtenir ma cartification.
+                        </p>
+                        <h3>Les compétences évaluées</h3>
+                        <p>PIX permet de travailler 16 compétences réparties en 5 grands domaines:<br>
+                            - Domaine 1 : Informations et données<br>
+                                1.1. Mener une recherche et une veille d’information<br>
+                                1.2. Gérer des données<br>
+                                1.3. Traiter des données<br>
+                            - Domaine 2 : Communication est collaboration<br>
+                                2.1. Interagir<br>
+                                2.2. Partager et publier<br>
+                                2.3. Collaborer<br>
+                                2.4. S’insérer dans le monde numérique<br>
+                            - Domaine 3 : Création de contenu<br>
+                                3.1. Développer des documents textuels<br>
+                                3.2. Développer des documents multimédia<br>
+                                3.3. Adapter les documents à leur finalité<br>
+                                3.4. Programmer<br>
+                            - Domaine 4 : Protection et sécurité<br>
+                                4.1. Sécuriser l’environnement numérique<br>
+                                4.2. Protéger les données personnelles et la vie privée<br>
+                                4.3. Protéger la santé, le bien-être et l'environnement<br>
+                            - Domaine 5 : Environnement numérique<br>
+                                5.1. Résoudre des problèmes techniques<br>
+                                5.2. Construire un environnement numérique<br>
+                        </p>
+                        <h3>Ce que la certification m'a réellement apportée</h3>
+                        <p>
+                           La certification PIX m'a permis de voir mes connaissances en informatique, en manipulant des documents afin de retrouver des informations, 
+                           en codant des minis applications et en classant des informations sur excel. Mais ça m'a également permis de réaliser les tâches plus 
+                           rapidement, comme par exemple le tri d'un tableau excel ou encore la manipulation de mail. Cette certification gratuite m'a été bénéfique parce que 
+                           je me suis rendu compte que mes connaissances informatiques étaient très réduites par rapport à toutes les solutions proposées.
+                        </p>
+                        <h3>Mes outils</h3>
+                        <p>
+                            Applications : Excel, Google, Word
+                            <br>Site de certification : Openclassroom
+                        </p>
+                    <h3>Attestation d'obtention de la certification PIX</h3>
+                    <div class="Certification-Certif">
+                        <a class="btn" href="../page/PixCertif.pdf" target="_blank"><i class="fa fa-window-restore"></i>Certificat 1</a>
+                        <a class="btn" href="../page/attestation-pix-20220222.pdf" target="_blank"><i class="fa fa-window-restore"></i>Certificat 2</a>
+                    </div>
+                    <!-- Footer Start -->
+                    <div class="footer wow fadeIn" data-wow-delay="0.3s">
+                        <div class="container-fluid">
+                            <div class="container">
+                                <div class="footer-info">
+                                    <h2>Mathis DELHALLE</h2>
+                                    <div class="footer-menu">
+                                        <p>mathis.delhalle@gmail.com</p>
+                                    </div>
+                                    <div class="footer-social">
+                                        <a href="https://fr.linkedin.com/in/mathis-delhalle-4869041b8" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container copyright">
+                                <p>&copy; <a href="#">PortFolio - Mathis DELHALLE</a>, All Right Reserved | Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer End -->
+            
+            <!-- Back to top button -->
+            <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+            
+            
+            <!-- Pre Loader -->
+            <div id="loader" class="show">
+                <div class="loader"></div>
+            </div>
+    
+            
+            <!-- JavaScript Libraries -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+            <script src="lib/easing/easing.min.js"></script>
+            <script src="lib/wow/wow.min.js"></script>
+            <script src="lib/waypoints/waypoints.min.js"></script>
+            <script src="lib/typed/typed.min.js"></script>
+            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+            <script src="lib/isotope/isotope.pkgd.min.js"></script>
+            <script src="lib/lightbox/js/lightbox.min.js"></script>
+            
+            <!-- Contact Javascript File -->
+            <script src="mail/jqBootstrapValidation.min.js"></script>
+            <script src="mail/contact.js"></script>
+    
+            <!-- Template Javascript -->
+            <script src="js/main.js"></script>
+        </body>
+    </html>

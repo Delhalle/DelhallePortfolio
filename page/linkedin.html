@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>PortFolio - DELHALLE Mathis</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="PortFolio" name="keywords">
+        <meta content="PortFolio" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.png rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../css/styleProjet.css" rel="stylesheet">
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="../page/accueil.html" class="navbar-brand">PortFolio</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        <!-- Nav Bar End -->
+
+         <!-- Team Start -->
+         <div class="PortFolio" id="PORTFOLIO">
+            <div class="container-fluid">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>PortFolio</p>
+                    <h2>Création d'un profil Linkedin</h2>
+                </div>
+            </div>
+            <div class="portfolio-text">
+                <h3>Compétences évaluées</h3>
+                <h5><strong>Organiser son développement professionnel</strong></h5>
+                <ul>
+                    <li>Développer son projet professionnel.</li>
+                    <li>Gérer son identité professionnelle.</li>
+                </ul>                     
+            </div>
+        <div class="portfolio-text">
+            <h3>Contexte du projet</h3>
+            <p>
+                En première année de mon BTS SIO, il m'a été demandé de créer un profil professionnel, afin de soigner sa e-réputation.
+                J'ai dû créer une adresse mail : "mathis.Delhalle@gmail.com" et un profil Linkedin qui sera à maintenir à jour régulièrement.
+            </p>
+        </div>
+        <div class="portfolio-description">
+            <h3>Description</h3>
+            <p>
+                LinkedIn est un réseau social professionnel en ligne. C’est un des plus gros site de réseau professionnel avec plus de 660 millions 
+                de membres issus de 170 secteurs d’activités dans plus de 200 pays. Aujourd’hui, c’est un des sites les plus utilisés pour chercher 
+                un emploi.
+                Ce profil Linkedin permet aux entreprises d'en savoir plus sur moi, et peut m'aider à être recruté pour un stage ou un travail.
+            </p>
+        </div>
+        <div class="portfolio-synthèse">
+            <h3>Synthèse</h3>
+            <p>
+                Créer et bien gérer son compte Linkedin est important. C'est une grande aide pour notre avenir professionnel.
+            </p>
+            <h3>Comptes-rendus</h3>
+        </div>
+        <div class="Portfolio-bouton">
+            <a class="btn" href="../page/Linkedin/Conseil sur le compte LinkedIn.docx.pdf" target="_blank"><i class="fa fa-window-restore"></i>Conseil sur le compte Linkedin</a>
+        </div>
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+              <div class="portfolio-details-container">
+      
+                <div class="slideshow-container" style="border: 7px inset #c01010; border-radius: 20px 20px 20px 20px;">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="../image/linkedin/monprofil.png" style="width:1100px; height:500px">
+                        <div class="text">Mon profil</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="../image/linkedin/infos.png" style="width:1100px; height:500px">
+                        <div class="text">Des informations sur moi</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="../image/linkedin/experiences et formations.png" style="width:1100px; height:500px">
+                        <div class="text">Mon expérience et ma formation</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="../image/linkedin/compétences et résulta.png" style="width:1100px; height:500px">
+                        <div class="text">Mes compétences et mes résultats aux examens passés</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                </div>
+                <br><br>
+                
+                <div style="text-align:left">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+                
+                <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                }
+                </script>
+            </div>
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <h2>Mathis DELHALLE</h2>
+                        <div class="footer-menu">
+                            <p>mathis.delhalle@gmail.com</p>
+                        </div>
+                        <div class="footer-social">
+                            <a href="https://fr.linkedin.com/in/mathis-delhalle-4869041b8" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <p>&copy; <a href="#">PortFolio - Mathis DELHALLE</a>, All Right Reserved | Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Back to top button -->
+        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

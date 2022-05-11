@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>PortFolio - DELHALLE Mathis</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="PortFolio" name="keywords">
+        <meta content="PortFolio" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.png rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../css/styleProjet.css" rel="stylesheet">
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="../page/accueil.html" class="navbar-brand">PortFolio</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        <!-- Nav Bar End -->
+
+         <!-- Team Start -->
+         <div class="PortFolio" id="PORTFOLIO">
+            <div class="container-fluid">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>PortFolio</p>
+                    <h2>TP : déploiement de l'application "Gestion des remboursements de frais" sur une machine virtuelle</h2>
+                </div>
+
+        <div class="portfolio-text">
+            <h3>Compétences évaluées</h3>
+            <h5><strong>Travailler en mode projet</strong></h5>
+            <ul>
+                <li>Analyser les objectifs et les modalités d’organisation d’un projet.</li>
+                <li>Planifier les activités.</li>
+            </ul> 
+            <h5><strong>Mettre à disposition des utilisateurs un service informatique</strong></h5>
+            <ul>
+                <li>Déployer un service.</li>
+                <li>Accompagner les utilisateurs dans la mise en place d’un service.</li>
+                <li>Réaliser les tests d’intégration et d’acceptation d’un service.</li>
+            </ul>                
+        </div>
+        <div class="portfolio-text">
+            <h3>Contexte du projet</h3>
+            <p>
+                Après la réalisation de l'application "Gestion des remboursements" (voir TP), il était prévu de déployer l'application sur internet 
+                en y accédant avec l'adresse IP d'une machine virtuelle. Cette machine contient tous les fichiers de l'application. En groupe, 
+                un slam et un sisr nous nous sommes organisés pour que l'application soit opérationnelle à distance.
+            </p>
+        </div>
+        <div class="portfolio-description">
+            <h3>Description</h3>
+            <p>
+                Dans un premier pour nous les SLAM, il a fallu lister les composants qui devaient être sur la machine virtuelle: 
+                <br>-Apache
+                <br>-MariaDB
+                <br>-Interpréteur PHP
+                <br>-PHPMyAdmin
+                <br>-Serveur SSH
+                <br>-Serveur FTP
+                <br>-Configurer HTTPS avec les réseaux pour sécuriser les accès sur le serveur Apache (certificat auto-signé)
+                <br><br>Une fois cela fait certaines actions étais à réaliser avant le jour-j du déploiement de la machine:
+                <br>-Exporter la base de données rembours_frais le jour j du projet commun sans les inserts de tests et les utilisateurs de tests. Garder seulement les inserts de table de référence (exemple la table ville)
+                <br>-Ajouter la création de la BD rembours_frais dans le script exporté de la base de données rembours_frais.sql 
+                <br>-Créer un script de la création du compte utilisé par l’application et de ses droits sur la base de données. Ce script sera à modifier pour la création du compte en mettant l’ip de la machine virtuelle. Puis un script avec la création de d’un nouvel utilisateur délégué nommé Agnès Kintzler (sur l’application) et leurs droits dans la base de données
+                <br><br>Et il y a les actions à réaliser le jour du déploiement de la machine virtuelle:
+                <br>-Via FTP copier le script rembours_frais.sql sur le serveur 
+                <br>-Via FTP copier le dossier de l’application AppliRembFrais sur le serveur
+                <br>-Importer le script SQL rembours_frais.sql dans le SGBD MariaDB. Puis exécuter le script sql rembours_frais.sql
+                <br>-Importer le dossier AppliRembFrais dans un dossier prévu à cet effet
+                <br>-Modification du fichier database.php dans le dossier config du dossier de l’application AppliRembFrais. Dans ce fichier, il faudra changer les variables host et port  
+                <br>-Configurer HTTPS avec un certificat auto-signé
+                <br><br>Des tâches quotidiennes sont à réaliser sur la base de données:
+                <br>-Sauvegarder la base de données tous les jours à partir de minuit
+                <br>-Effectuer un job qui supprimera les infos tous les 6 mois en règle avec la loi de la RGPD
+                <br><br>Et pour la table logEvenement de l'application il faut faire :
+                <br><strong>BD</strong>  
+                <br>–>création d’une table ‘Action’
+                <br>–>création d’une table ‘Table’
+                <br>–>création d’une table ‘LogEvenement’
+
+                <br><br><strong>MVC Application</strong> 
+                <br><strong> Modèle :</strong> 
+                <br>-Entity → 3 classes Action.php(id,libelle); Table.php(id,nom); LogEvenement.php(id,ipUtilisateur,dateHeure,numeroEnregistrement, Utilisateur unUtilisateur référence à la classe Utilisateur, Action UneAction référence à la classe Action et Table UneTable référence à la classe Table)
+
+                <br><br>-Repository →3 Repository (1 repository pour chaque classe)
+                <br>-LogEvenementRepository va contenir une méthode d’ajout (insert) avec un objet LogEvenement en entrée (ipUtilisateur,dateHeure,numeroEnregistrement, objet Action avec un id uniquement et l’objet Table avec un id uniquement)
+
+                <br>-ActionRepository un select qui permet d’obtenir l’id à partir du libellé passé
+                <br>-TableRepository un select qui permet d’obtenir l’id à partir du libellé passé
+                <br>Modifier tous nos repository avec méthodes inserts dans le repository pour récupérer le dernier id de l’ajout 
+
+                <br><br><strong>Contrôleur :</strong> 
+                <br>-1 classe logEvenement (pas maintenant)
+                <br>-Modifier tous les contrôleurs en passant le repository de logEvenement
+
+                <br><br>Un compte est à créer pour l'application:
+                <br>Create user ‘appli_rbt_frais’@’adresseipdelamachine’ identified by ‘JEub@e2021PgLf’;
+
+                <br><br>GRANT SELECT, INSERT, UPDATE, DELETE ON rembours_frais 
+                TO ‘appli_rbt_frais’@’adresseipdelamachine’
+            </p>
+        </div>
+        <div class="portfolio-synthèse">
+            <h3>Synthèse</h3>
+            <p>
+                Ce projet a été difficile parce qu'il était important de bien s'organiser pour réussir le déploiement. Mais c'était sympa de travailler 
+                en binôme avec un SISR pour voir davantage ce qu'ils sont amenés à faire dans leur option.
+            </p>
+            <h3>Comptes-rendus</h3>
+        </div>
+        
+        <div class="Portfolio-bouton">
+            <a class="btn" href="../page/déploiement/Note Service SLAM_SISR.docx.pdf" target="_blank"><i class="fa fa-window-restore"></i>Note composants et utilisateurs à créer</a>
+            <a class="btn" href="../page/déploiement/Pas a pas projet slam sisr.pdf" target="_blank"><i class="fa fa-window-restore"></i>Compte-rendu</a>
+        </div>
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+              <div class="portfolio-details-container">
+      
+                <div class="slideshow-container" style="border: 7px inset #c01010; border-radius: 20px 20px 20px 20px;">
+
+                    <div class="mySlides fade">
+                    <div class="numbertext">1 / 2</div>
+                    <img src="../image/déploiement/putty.png" style="width:1100px; height:500px">
+                    <div class="text">Connexion à la machine virtuelle sur Putty</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="../image/déploiement/filezilla déplacement fichier.png" style="width:1100px; height:500px">
+                    <div class="text">FileZilla qui m'a permis de déplacer la base de données et l'application</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="../image/déploiement/1.png" style="width:1100px; height:500px">
+                        <div class="text">Application qui fonctionne et connexion à un compte délégué</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="../image/déploiement/test.png" style="width:1100px; height:500px">
+                        <div class="text">Les comptes, les tables et les droits utilisateurs</div>
+                    </div>
+                
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                </div>
+                <br><br>
+                
+                <div style="text-align:left">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                </div>
+                
+                <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                }
+                </script>
+            </div>
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <h2>Mathis DELHALLE</h2>
+                        <div class="footer-menu">
+                            <p>mathis.delhalle@gmail.com</p>
+                        </div>
+                        <div class="footer-social">
+                            <a href="https://fr.linkedin.com/in/mathis-delhalle-4869041b8" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <p>&copy; <a href="#">PortFolio - Mathis DELHALLE</a>, All Right Reserved | Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Back to top button -->
+        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

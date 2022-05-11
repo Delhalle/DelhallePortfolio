@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>PortFolio - DELHALLE Mathis</title>
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+            <meta content="PortFolio" name="keywords">
+            <meta content="PortFolio" name="description">
+    
+            <!-- Favicon -->
+            <link href="img/favicon.png rel="icon">
+    
+            <!-- Google Font -->
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+            <!-- CSS Libraries -->
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+            <link href="lib/animate/animate.min.css" rel="stylesheet">
+            <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+            <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    
+            <!-- Template Stylesheet -->
+            <link href="../css/styleProjet.css" rel="stylesheet">
+        </head>
+    
+        <body data-spy="scroll" data-target=".navbar" data-offset="51">
+            <!-- Nav Bar Start -->
+            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                <div class="container-fluid">
+                    <a href="../page/accueil.html" class="navbar-brand">PortFolio</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            <!-- Nav Bar End -->
+    
+             <!-- Team Start -->
+             <div class="PortFolio" id="PORTFOLIO">
+                <div class="container-fluid">
+                    <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                        <p>PortFolio</p>
+                        <h2>Ma certification cybersécurité</h2>
+                    </div>
+    
+                    <section id="portfolio-details" class="portfolio-details">
+                        <div class="container">
+                          <div class="portfolio-details-container">
+                  
+                            <div class="slideshow-container" style="border: 7px inset #c01010; border-radius: 20px 20px 20px 20px;">
+    
+                                <div class="mySlides fade">
+                                    <div class="numbertext">1 / 1</div>
+                                    <img src="../image/2022-02-28_09h32_36.png" style="width:1100px; height:500px">
+                                    <div class="text">Le virus WannaCry</div>
+                                </div>     
+                            
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            
+                            </div>
+                            <br><br>
+                            
+                            <div style="text-align:left">
+                            <span class="dot" onclick="currentSlide(1)"></span> 
+                            </div>
+                            
+                            <script>
+                            var slideIndex = 1;
+                            showSlides(slideIndex);
+                            
+                            function plusSlides(n) {
+                            showSlides(slideIndex += n);
+                            }
+                            
+                            function currentSlide(n) {
+                            showSlides(slideIndex = n);
+                            }
+                            
+                            function showSlides(n) {
+                            var i;
+                            var slides = document.getElementsByClassName("mySlides");
+                            var dots = document.getElementsByClassName("dot");
+                            if (n > slides.length) {slideIndex = 1}    
+                            if (n < 1) {slideIndex = slides.length}
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";  
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                            }
+                            slides[slideIndex-1].style.display = "block";  
+                            dots[slideIndex-1].className += " active";
+                            }
+                            </script>
+                    <div class="portfolio-info">
+                        <h3>Information de la certification</h3>
+                        <ul>
+                        <li><strong>Site</strong>: OpenClassroom</li>
+                        <li><strong>Découverte</strong>: Professeur, ANSSI</li>
+                        <li><strong>Date de la certification</strong>: septembre 2021</li>
+                        </ul>
+                    </div>
+                </div>
+                <h2><br>La certification cybersécurité qu'est-ce que c'est ?</h2>
+                <div class="Certification-pix">
+                    <div class="Certification-img">
+                        <img src="../img/pixCertif.png" alt="Image">
+                    </div>
+                    <div class="Certification-text">
+                        <p>La cybersécurité est devenue très médiatisée avec les incidents engendrés par les cyberattaques. Chaque année, il y a des millions voir
+                            des milliards de mots de passe volés. Aujourd'hui tout le monde stocke ses données sur internet, et parmi ces données de nombreuses sont personnelles.
+                            De nombreuses entreprises se font voler les informations de leurs clients ce qui nuit à leur réputation et fait perdre de nombreux acheteurs.
+                            Cette certification présente donc ce monde qu'est la cybersécurité. Elle nous sensibilise à son utilisation.
+                        </p>
+                        <h3>Pourquoi avoir passés cette certification ?</h3>
+                        <p>
+                            La cybersécurité est devenue très importante, alors je pense qu'il est nécessaire de connaître un minimum se domaine.
+                            Ce sont des connaissances qui s'ajoutent à mes cours de cybersécurité en Bloc 3.
+                        </p>
+                        <h3>Mes objectifs</h3>
+                        <p>
+                            -Engendrer des connaissances en cybersécurité.
+                            <br>-Connaitre les démarches de protection des données.
+                            <br>-Identifier les risques liés à la cybersécurité.
+                            <br>-Identifier les métiers de la cybersécurité.
+                        </p>
+                        <h3>Quelques notions acquises</h3>
+                        <p>
+                            <u>Le virus WannaCry</u> provient d'une faille de sécurité de Windows qui avait elle-même été découverte par l'agence de sécurité américaine NSA... qui s'était fait voler cette "recette" lors d'un piratage.
+                            Le virus se propage tout seul sur les ordinateurs sous Windows XP qui n'ont pas été mis à jour (même pas besoin d'ouvrir un fichier !). 
+                            Une fois installé, il chiffre toutes les données de l'ordinateur et réclame une rançon, qui doit être payée en Bitcoin. 
+                            La monnaie électronique permet ici aux pirates de récupérer des fonds discrètement et de blanchir l'argent.
+                            <br><u>Les failles logicielles</u> sont des défauts liés à des bugs des logiciels.
+                            <br><u></u>
+                        </p>
+                        <h3>Ce que la certification m'a réellement apportée</h3>
+                        <p>
+                            J'ai vu certains des cas de cybersécurité les plus importants. j'ai identifié leurs faiblesses qui ont rendu cette attaque possible et l'impact qu'elle a eu sur l'entreprise.
+                        </p>
+                        <h3>Mes outils</h3>
+                        <p>
+                            Site : Wikileaks, Time, Popular Science, zdNet, ANSSI, regionsJob.
+                            <br>Site de certification : Openclassroom
+                        </p>
+                    <h3>Attestation d'obtention de la certification</h3>
+                    <div class="Certification-Certif">
+                        <img src="../image/cyberCertif.png" alt="Image">
+                    </div>
+                    <!-- Footer Start -->
+                    <div class="footer wow fadeIn" data-wow-delay="0.3s">
+                        <div class="container-fluid">
+                            <div class="container">
+                                <div class="footer-info">
+                                    <h2>Mathis DELHALLE</h2>
+                                    <div class="footer-menu">
+                                        <p>mathis.delhalle@gmail.com</p>
+                                    </div>
+                                    <div class="footer-social">
+                                        <a href="https://fr.linkedin.com/in/mathis-delhalle-4869041b8" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container copyright">
+                                <p>&copy; <a href="#">PortFolio - Mathis DELHALLE</a>, All Right Reserved | Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer End -->
+            
+            <!-- Back to top button -->
+            <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+            
+            
+            <!-- Pre Loader -->
+            <div id="loader" class="show">
+                <div class="loader"></div>
+            </div>
+    
+            
+            <!-- JavaScript Libraries -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+            <script src="lib/easing/easing.min.js"></script>
+            <script src="lib/wow/wow.min.js"></script>
+            <script src="lib/waypoints/waypoints.min.js"></script>
+            <script src="lib/typed/typed.min.js"></script>
+            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+            <script src="lib/isotope/isotope.pkgd.min.js"></script>
+            <script src="lib/lightbox/js/lightbox.min.js"></script>
+            
+            <!-- Contact Javascript File -->
+            <script src="mail/jqBootstrapValidation.min.js"></script>
+            <script src="mail/contact.js"></script>
+    
+            <!-- Template Javascript -->
+            <script src="js/main.js"></script>
+        </body>
+    </html>
